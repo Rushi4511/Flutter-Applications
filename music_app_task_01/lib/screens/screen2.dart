@@ -309,29 +309,33 @@ class _Screen2State extends State<Screen2> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(items: [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.favorite_outline),
-          label: "Like",
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.search_off_outlined),
-          label: "Search",
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home_max_outlined),
-          label: "Home",
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.shopping_cart_checkout_outlined),
-          label: "Cart",
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.man_2_outlined),
-          label: "Profile",
-        ),
-      ],
-      
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Color.fromRGBO(19, 19, 19, 1),
+        selectedItemColor: Color.fromRGBO(230, 154, 21, 1),
+        unselectedItemColor: Colors.white,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite_outline),
+            label: "Like",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: "Search",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_cart),
+            label: "Cart",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: "Profile",
+          ),
+        ],
       ),
     );
   }

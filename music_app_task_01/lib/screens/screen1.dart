@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:google_fonts/google_fonts.dart";
+import "package:music_app_task_01/screens/screen2.dart";
 
 class Screen1 extends StatefulWidget {
   const Screen1({super.key});
@@ -46,7 +47,11 @@ class _Screen1State extends State<Screen1> {
             top: 575,
             left: 75,
             child: GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return Screen2();
+                }));
+              },
               child: Container(
                 height: 50,
                 width: 270,

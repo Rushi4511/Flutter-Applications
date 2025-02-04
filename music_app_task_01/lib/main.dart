@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:music_app_task_01/screens/screen1.dart';
-import 'package:music_app_task_01/screens/screen2.dart';
+
 
 void main() {
   runApp(const MainApp());
@@ -14,6 +14,6 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         darkTheme: ThemeData(brightness: Brightness.dark),
-        home: Screen2());
+        home: Screen1());
   }
 }
