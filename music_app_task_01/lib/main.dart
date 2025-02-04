@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_app_task_01/screens/screen1.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,8 +10,9 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Screen1()
-    );
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        darkTheme: ThemeData(brightness: Brightness.dark),
+        home: Screen1());
   }
 }
