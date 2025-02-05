@@ -1,6 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:music_app_task_01/screens/screen3.dart';
 
 class Screen2 extends StatefulWidget {
   const Screen2({super.key});
@@ -87,7 +88,7 @@ class _Screen2State extends State<Screen2> {
                             color: const Color.fromRGBO(255, 46, 0, 1),
                             borderRadius: BorderRadius.circular(19),
                           ),
-                          child: Text("Get Started",
+                          child: Text("Subscribe",
                               style: GoogleFonts.inter(
                                 textStyle: const TextStyle(
                                     color: Colors.black,
@@ -153,41 +154,51 @@ class _Screen2State extends State<Screen2> {
                       itemBuilder: (context, index) {
                         return Padding(
                           padding: const EdgeInsets.only(right: 20),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                width: 120,
-                                height: 140,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(15),
-                                  child: Image.asset(
-                                    photos1[index],
-                                    fit: BoxFit.cover,
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return Screen3();
+                              }));
+                            },
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  width: 120,
+                                  height: 140,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                  ),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(15),
+                                    child: Image.asset(
+                                      photos1[index],
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              const SizedBox(height: 3),
-                              Text(
-                                title1[index],
-                                style: GoogleFonts.inter(
-                                  textStyle: const TextStyle(
-                                      color: Color.fromRGBO(203, 200, 200, 1)),
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                              Text("2020",
+                                const SizedBox(height: 3),
+                                Text(
+                                  title1[index],
                                   style: GoogleFonts.inter(
                                     textStyle: const TextStyle(
-                                        color: Color.fromRGBO(132, 125, 125, 1),
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.w400),
-                                  )),
-                            ],
+                                        color:
+                                            Color.fromRGBO(203, 200, 200, 1)),
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                                Text("2020",
+                                    style: GoogleFonts.inter(
+                                      textStyle: const TextStyle(
+                                          color:
+                                              Color.fromRGBO(132, 125, 125, 1),
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.w400),
+                                    )),
+                              ],
+                            ),
                           ),
                         );
                       },
@@ -328,7 +339,7 @@ class _Screen2State extends State<Screen2> {
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
+            icon: Icon(Icons.shopping_bag),
             label: "Cart",
           ),
           BottomNavigationBarItem(
